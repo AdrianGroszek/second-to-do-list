@@ -1,0 +1,156 @@
+:root {
+	--color-dark-blue: #1b263b;
+	--color-darker-blue: #0d1b2a;
+
+	--color-light-gray: #e0e1dd;
+	--color-orange: #c77dff;
+	--color-dark-red: #e63946;
+	--color-green: #80ed99;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.6rem;
+	background-color: var(--color-dark-blue);
+	color: var(--color-light-gray);
+}
+
+input,
+button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+.header-container,
+.main-container {
+	width: 60rem;
+	margin: 0 auto;
+	padding-bottom: 2rem;
+}
+
+.header-container {
+	padding-top: 5rem;
+	border-bottom: 1px solid var(--color-green);
+}
+
+.main-container {
+	padding-top: 1.5rem;
+}
+
+.heading {
+	font-size: 3.2rem;
+	margin-bottom: 1rem;
+	padding-left: 2rem;
+}
+
+.heading--small {
+	font-size: 2.4rem;
+}
+
+#new-task-form {
+	display: flex;
+	width: 60rem;
+}
+
+#new-task-input {
+	flex: 1;
+	background-color: var(--color-light-gray);
+	padding: 1rem;
+	padding-left: 2rem;
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: var(--color-darker-blue);
+	border-radius: 50px;
+}
+
+#new-task-input::placeholder {
+	color: var(--color-dark-blue);
+}
+
+#new-task-submit {
+	margin-left: 2rem;
+	padding: 1rem;
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: var(--color-green);
+	cursor: pointer;
+	transition: opacity 0.2s;
+}
+
+#new-task-submit:hover {
+	opacity: 0.7;
+}
+
+#new-task-submit:active {
+	opacity: 0.55;
+}
+
+.tasks {
+	display: flex;
+	flex-direction: column;
+}
+
+.task {
+	display: flex;
+	margin-bottom: 0.5rem;
+}
+
+.content {
+	display: flex;
+	flex: 1;
+}
+
+.task__text {
+	flex: 1;
+	background-color: var(--color-light-gray);
+	padding: 1rem;
+	padding-left: 2rem;
+	border-radius: 0.4rem;
+	color: var(--color-dark-blue);
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+
+.actions {
+	display: flex;
+}
+
+.btn {
+	padding: 1rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	cursor: pointer;
+	transition: opacity 0.2s;
+}
+.btn:hover {
+	opacity: 0.8;
+}
+
+.btn:active {
+	opacity: 0.55;
+}
+
+.actions .edit-btn {
+	color: var(--color-orange);
+}
+
+.actions .delete-btn {
+	color: var(--color-dark-red);
+}
